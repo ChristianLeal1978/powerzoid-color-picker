@@ -19,14 +19,12 @@ cp "$DIR/extension/extension.js"   "$DEST/"
 cp "$DIR/extension/stylesheet.css" "$DEST/"
 echo -e "  ${G}✓${NC}  Archivos instalados en $DEST"
 
-if command -v gnome-extensions &>/dev/null; then
-    gnome-extensions enable "$UUID" 2>/dev/null || true
-    echo -e "  ${G}✓${NC}  Extensión habilitada"
-fi
-
 echo ""
-echo -e "${BOLD}Cierra sesión y vuelve a entrar${NC} para que GNOME la cargue."
-echo -e "${DIM}(solo necesario la primera vez en Wayland)${NC}"
+echo -e "${BOLD}Cierra sesión y vuelve a entrar${NC} para que GNOME la detecte."
+echo -e "${DIM}(necesario la primera vez: el shell no descubre UUIDs nuevos en caliente)${NC}"
 echo ""
-echo -e "Verifica después:  gnome-extensions info $UUID"
+echo -e "Después, habilítala:"
+echo -e "  gnome-extensions enable $UUID"
+echo ""
+echo -e "Verifica:  gnome-extensions info $UUID"
 echo ""
