@@ -1,0 +1,18 @@
+/*
+ * PowerZoid Color Picker — stylesheet.css
+ */
+
+.powerzoid-color-picker-swatch {
+    border-radius: 3px;
+    border: 1px solid rgba(255, 255, 255, 0.35);
+}
+
+.powerzoid-color-picker-label {
+    font-family: monospace;
+    font-weight: bold;
+}
+
+.powerzoid-color-picker-history-swatch {
+    border-radius: 2px;
+    border: 1px solid rgba(255, 255, 255, 0.35);
+}
